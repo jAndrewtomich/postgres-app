@@ -1,20 +1,29 @@
 import os
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config:
     DEBUG = False
-    DEVELOPMENT = False
-    SECRET_KEY = os.getenv("SECRET_KEY", "skey")
+    TESTING = False
+    CSRF_ENABLED = True
+    SECRET_KEY = 'skey'
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
 
 
 class ProductionConfig(Config):
-    pass
+    DEBUG = False
 
 
 class StagingConfig(Config):
+    DEVELOPEMENT = True 
     DEBUG = True
 
 
 class DevelopmentConfig(Config):
-    DEBUG = True
     DEVELOPMENT = True
+    DEBUG = True
+
+
+class TestingConfig(Config):
+    TESTING = True
+
