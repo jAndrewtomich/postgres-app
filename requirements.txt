@@ -3,6 +3,7 @@ certifi==2021.10.8
 click @ file:///tmp/build/80754af9/click_1621604852318/work
 Flask @ file:///home/ktietz/src/ci/flask_1611932660458/work
 Flask-Migrate==2.5.2
+Flask-Script==2.0.6
 Flask-SQLAlchemy==2.4.1
 greenlet==1.1.2
 gunicorn @ file:///tmp/build/80754af9/gunicorn_1615982947671/work
