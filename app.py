@@ -13,3 +13,13 @@ from models import PGapp
 def hello():
     secret_key = app.config.get("SECRET_KEY") 
     return f"The skey is {secret_key}"
+
+
+@app.route('/<name>')
+def hello_name(name):
+    return "Hello, {}!".format(name)
+
+
+if __name__ == '__main__':
+    app.run()
+
