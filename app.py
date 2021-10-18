@@ -5,7 +5,7 @@ import re
 import nltk
 from stop_words import stops
 from collections import Counter
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, url_for
 from flask_sqlalchemy import SQLAlchemy
 from bs4 import BeautifulSoup
 from rq import Queue
